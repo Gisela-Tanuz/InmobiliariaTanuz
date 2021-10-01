@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inicio">
+
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="com.tanuz.inmobiliariatanuz.ui.Inicio.InicioFragment"
+        android:label="@string/menu_inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.tanuz.inmobiliariatanuz.ui.Perfil.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/fragment_perfil" />
+
+    <fragment
+        android:id="@+id/nav_inmuebles"
+        android:name="com.tanuz.inmobiliariatanuz.ui.Inmuebles.InmueblesFragment"
+        android:label="@string/menu_inmuebles"
+        tools:layout="@layout/fragment_inmuebles" >
+        <action
+            android:id="@+id/action_nav_inmuebles_to_detalleInmuebleFragment"
+            app:destination="@id/detalleInmuebleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleInmuebleFragment"
+        android:name="com.tanuz.inmobiliariatanuz.ui.Inmuebles.DetalleInmuebleFragment"
+        android:label="@string/detallesInmuebles"
+        tools:layout="@layout/detalle_inmueble_fragment" >
+        <action
+            android:id="@+id/action_detalleInmuebleFragment_to_nav_inmuebles"
+            app:destination="@id/nav_inmuebles" />
+    </fragment>
+    <fragment
+        android:id="@+id/inquilinosFragment"
+        android:name="com.tanuz.inmobiliariatanuz.ui.Inquilinos.InquilinosFragment"
+        android:label="@string/inquilinoFragment"
+        tools:layout="@layout/inquilinos_fragment" >
+        <action
+            android:id="@+id/action_inquilinosFragment_to_detallesInquilinoFragment"
+            app:destination="@id/detallesInquilinoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesInquilinoFragment"
+        android:name="com.tanuz.inmobiliariatanuz.ui.Inquilinos.DetallesInquilinoFragment"
+        android:label="@string/detallesInquilino"
+        tools:layout="@layout/detalles_inquilino_fragment" >
+        <action
+            android:id="@+id/action_detallesInquilinoFragment_to_inquilinosFragment"
+            app:destination="@id/inquilinosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contratosFragment"
+        android:name="com.tanuz.inmobiliariatanuz.ui.Contratos.ContratosFragment"
+        android:label="@string/contratosFragments"
+        tools:layout="@layout/contratos_fragment" >
+        <action
+            android:id="@+id/action_contratosFragment_to_detallesContratoFragment"
+            app:destination="@id/detallesContratoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesContratoFragment"
+        android:name="com.tanuz.inmobiliariatanuz.ui.Contratos.DetallesContratoFragment"
+        android:label="@string/DetalleContrato"
+        tools:layout="@layout/detalles_contrato_fragment" >
+        <action
+            android:id="@+id/action_detallesContratoFragment_to_contratosFragment"
+            app:destination="@id/contratosFragment" />
+        <action
+            android:id="@+id/action_detallesContratoFragment_to_pagosFragment"
+            app:destination="@id/pagosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagosFragment"
+        android:name="com.tanuz.inmobiliariatanuz.ui.Contratos.PagosFragment"
+        android:label="@string/pagosFragment"
+        tools:layout="@layout/pagos_fragment" >
+        <action
+            android:id="@+id/action_pagosFragment_to_detallesContratoFragment"
+            app:destination="@id/detallesContratoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cerrarSesionFragment"
+        android:name="com.tanuz.inmobiliariatanuz.ui.CerrarSesion.CerrarSesionFragment"
+        android:label="@string/cerrarSesionFragment"
+        tools:layout="@layout/cerrar_sesion_fragment" >
+        <action
+            android:id="@+id/action_cerrarSesionFragment_to_nav_inicio"
+            app:destination="@id/nav_inicio" />
+    </fragment>
+</navigation>

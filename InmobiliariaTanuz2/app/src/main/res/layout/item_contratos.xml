@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemContrato"
+    app:cardBackgroundColor="#FFBF00"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="10dp"
+    app:contentPadding="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginTop="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="168dp"
+        android:layout_height="226dp">
+
+        <ImageView
+            android:id="@+id/ivPropAlqContrato"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+
+        <TextView
+            android:id="@+id/tvDirecciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPropAlqContrato" />
+
+        <Button
+            android:id="@+id/btMostrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Ver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDirecciones" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

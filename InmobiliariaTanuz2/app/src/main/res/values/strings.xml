@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Inmobiliaria Tanuz</string>
+    <string name="title_activity_menu_navegable">MenuNavegable</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_inmuebles">Inmuebles</string>
+    <string name="menu_inquilinos">Inquilinos</string>
+    <string name="menu_contratos">Contratos</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="detallesInmuebles">Datos del inmueble</string>
+    <string name="inquilinoFragment">Inquilinos</string>
+    <string name="detallesInquilino">Datos del inquilino</string>
+    <string name="contratosFragments">Contratos</string>
+    <string name="DetalleContrato">Datos del contrato</string>
+    <string name="pagosFragment">Datos del pago</string>
+    <string name="cerrarSesionFragment">Cerrar sesión</string>
+</resources>

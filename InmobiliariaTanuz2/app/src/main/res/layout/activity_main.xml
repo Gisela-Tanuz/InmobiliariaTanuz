@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<TextView
+android:id="@+id/textView2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:text="Inmobiliaria Tanúz"
+android:textSize="@android:dimen/app_icon_size"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.47"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
+
+<ImageView
+android:id="@+id/ivfotoInm"
+android:layout_width="match_parent"
+android:layout_height="180dp"
+android:layout_marginTop="56dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/textView2"
+app:srcCompat="@drawable/ic_launcher_background" />
+
+<EditText
+android:id="@+id/etEmail"
+android:layout_width="match_parent"
+android:layout_height="49dp"
+android:layout_marginTop="48dp"
+android:ems="10"
+android:hint="Ingrese su E-mail"
+android:inputType="textWebEmailAddress"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/ivfotoInm" />
+
+<EditText
+android:id="@+id/etClave"
+android:layout_width="match_parent"
+android:layout_height="49dp"
+android:layout_marginTop="48dp"
+android:ems="10"
+android:hint="Ingrese su clave"
+android:inputType="textPassword"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <Button
+        android:id="@+id/btIngresar"
+        android:layout_width="359dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="116dp"
+        android:text="Ingresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etClave"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <TextView
+        android:id="@+id/tvMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Clave o usuario incorrecto."
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="26sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etClave" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
