@@ -32,8 +32,12 @@ public class ContratosViewModel extends ViewModel {
     public void  ObtenerInmPorContrato() {
         ApiClient api = ApiClient.getApi();
         ArrayList<Inmueble> i = api.obtenerPropiedadesAlquiladas();
-        inmuebles.setValue(i);
-        tvNoContrato.setValue(View.INVISIBLE);
+        if (i.size() == 0) {
+            tvNoContrato.setValue(View.VISIBLE);
+        } else {
+            inmuebles.setValue(i);
+            tvNoContrato.setValue(View.INVISIBLE);
+        }
         }
 
 }

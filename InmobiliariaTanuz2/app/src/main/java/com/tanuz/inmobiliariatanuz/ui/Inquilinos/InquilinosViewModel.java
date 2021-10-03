@@ -29,13 +29,17 @@ public LiveData<ArrayList<Inmueble>> getInmueble(){
         return tvNoInmueble;
     }
 
-public void obtenerPropAlquilada(){
+public void obtenerPropAlquilada() {
     ApiClient api = ApiClient.getApi();
     ArrayList<Inmueble> i = api.obtenerPropiedadesAlquiladas();
 
-       inmueble.setValue(i);
-       tvNoInmueble.setValue(View.INVISIBLE);
-   }
+    if(i.size()== 0){
+        tvNoInmueble.setValue(View.VISIBLE);
+    }else{
+        inmueble.setValue(i);
+        tvNoInmueble.setValue(View.INVISIBLE);
+    }
+}
 
 
 }

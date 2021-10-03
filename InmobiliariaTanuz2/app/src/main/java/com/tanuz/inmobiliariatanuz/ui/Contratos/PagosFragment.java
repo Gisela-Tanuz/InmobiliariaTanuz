@@ -52,6 +52,12 @@ public class PagosFragment extends Fragment {
 
             }
         });
+        mViewModel.getTvNoPagos().observe(getViewLifecycleOwner(), new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                binding.tvNoPagos.setVisibility(integer);
+            }
+        });
         mViewModel.ObtenerPagos(getArguments());
                 return root;
     }

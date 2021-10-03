@@ -32,9 +32,13 @@ public class InmueblesViewModel extends ViewModel {
     public void ObtenerInmueble(){
         ApiClient apiClient = ApiClient.getApi();
         ArrayList<Inmueble> i = apiClient.obtnerPropiedades();
-
+        if(i.size() == 0){
+            tvNoInmueble.setValue(View.VISIBLE);
+        }else {
             inmueble.setValue(i);
             tvNoInmueble.setValue(View.INVISIBLE);
+        }
+
         }
 
 }

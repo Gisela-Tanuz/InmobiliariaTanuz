@@ -16,19 +16,32 @@ import java.util.ArrayList;
 public class PagosViewModel extends ViewModel {
     // TODO: Implement the ViewModel
     private MutableLiveData<ArrayList<Pago>> pagos;
+    private MutableLiveData<Integer>tvNoPagos;
     private ApiClient api;
+
     public LiveData<ArrayList<Pago>> getPagos(){
         if(pagos == null){
             pagos= new MutableLiveData<>();
         }
         return pagos;
     }
+    public LiveData<Integer> getTvNoPagos(){
+        if(tvNoPagos == null){
+            tvNoPagos= new MutableLiveData<>();
+        }
+        return tvNoPagos;
+    }
 
   public void ObtenerPagos(Bundle bundle){
       Contrato contrato = (Contrato) bundle.getSerializable("contrato");
       api = ApiClient.getApi();
       ArrayList<Pago> p = api.obtenerPagos(contrato);
-      pagos.setValue(p);
+      if (p.size() == 0) {
+          tvNoPagos.setValue(View.VISIBLE);
+      } else {
+          tvNoPagos.setValue(View.INVISIBLE);
+          pagos.setValue(p);
+      }
   }
 
 }
